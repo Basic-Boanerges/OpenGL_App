@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create build directory",
+            "type": "shell",
+            "command": "mkdir",
+            "args": ["build"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run CMake",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S${workspaceRoot}",
+                "-Bbuild",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build with Make",
+            "type": "shell",
+            "command": "make",
+            "args": ["-C", "build"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "dependsOn": ["Run CMake"]
+        },
+        {
+            "label": "Run Executable",
+            "type": "shell",
+            "command": "./build/OpenGL_App",
+            "group": "test",
+            "dependsOn": ["Build with Make"]
+        }
+    ]
+}

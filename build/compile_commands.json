@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/panakj/Dev/Cpp/OpenGL/build",
+  "command": "/usr/bin/clang++  -I/Users/panakj/Dev/Cpp/OpenGL/dependencies/include -isystem /Library/Frameworks/SDL2.framework/Headers -F/Library/Frameworks -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -F /Library/Frameworks/ -o CMakeFiles/OpenGL_App.dir/src/main.cpp.o -c /Users/panakj/Dev/Cpp/OpenGL/src/main.cpp",
+  "file": "/Users/panakj/Dev/Cpp/OpenGL/src/main.cpp",
+  "output": "CMakeFiles/OpenGL_App.dir/src/main.cpp.o"
+}
+]
